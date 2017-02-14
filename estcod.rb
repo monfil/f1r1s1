@@ -1,4 +1,4 @@
-class PERSON
+class Person
   LIFE_stage = {childhood: 12, teenager: 19, adult: 50}
   LEGAL_AGE = 18
   attr_reader :name
@@ -32,10 +32,10 @@ end
 
 # Esta parte del código son pruebas. 
 # Antes y después deben de imprimir puros "true"
-fernando = PERSON.new("Fernando",5)
-juan = PERSON.new("Juan",45)
-laura = PERSON.new("Laura",87)
-andrea = PERSON.new("Andrea",13)
+fernando = Person.new("Fernando",5)
+juan = Person.new("Juan",45)
+laura = Person.new("Laura",87)
+andrea = Person.new("Andrea",13)
 
 puts fernando.legal? == false
 puts juan.legal? == true
