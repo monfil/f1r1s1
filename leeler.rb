@@ -7,21 +7,22 @@ end
 # Lee el método y comprende que hace y que resultado regresa 
 
 def max_letter_frequency_per_word(sentence)
-    words_longer_than(sentence, 3).letter_per_word(sentence, "e").max
-    #sentence.split.select{|word| word.length > 3}.map{ |w| p w.count("e") }.max
+    words_split = sentence.split
+    longer_words = words_longer_than(words_split, 3)
+    count_letter = letter_per_word(longer_words, "e")
+    numbers_larger_than(count_letter)
 end
 
 def words_longer_than(array,num)
-  array.split.select{|word| word.length > num}
+  array.select{|word| word.length > num}
 end
 
-public
 def letter_per_word(array,letter)
-  p array.split.map{ |w| w.count(letter) }
+  array.map{ |w| w.count(letter) }
 end
 
 def numbers_larger_than(num_array)
-  
+  num_array.max
 end
 
 # Estas son pruebas que no debes de modificar 
